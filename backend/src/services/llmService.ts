@@ -1,9 +1,9 @@
 import OpenAI from 'openai';
 import { LLMAnalysisResponse } from '../types/analysis';
 
-// DeepSeek API配置
+// DeepSeek API配置 - 从环境变量读取
 const client = new OpenAI({
-  apiKey: 'sk-916b2398ca2043cbb6ae8abe8e6ab69e',
+  apiKey: process.env.DEEPSEEK_API_KEY || '',
   baseURL: 'https://api.deepseek.com',
 });
 
